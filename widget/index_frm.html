@@ -24,9 +24,10 @@
 	    function testUmeng(){
 	    	var param = {
 	    		appkey: '5ca3020461f564190d000ef3',
-	    		channel: 'Umeng',
+	    		channel: '寒武纪年',
 	    		deviceType: 1,
-	    		pushSecret: ''
+	    		pushSecret: '',
+				logEnabled: true // 调试模式
 	    	};
 	    	uzmoduledemo.initUM(param,function(ret,err){
 	    		alert(JSON.stringify(ret));
@@ -35,8 +36,8 @@
 
 	    function signIn(){
 	    	var param = {
-	    		userId: '177086',
-	    		provider: '微信'
+	    		userId: '3008653',
+	    		provider: 'QQ'
 	    	}
 	    	uzmoduledemo.loginUM(param,function(ret,err){
 	    		alert(JSON.stringify(ret));
@@ -60,7 +61,7 @@
 
 	    function onPageStart(){
 	    	var param = {
-	    		viewName: 'case'
+	    		viewName: 'bookInfo'
 	    	};
 	    	uzmoduledemo.onPageStartUM(param,function(ret,err){
 	    		alert(JSON.stringify(ret));
@@ -69,7 +70,7 @@
 
 	    function onPageEnd(){
 	    	var param = {
-	    		viewName: 'case'
+	    		viewName: 'bookInfo'
 	    	};
 	    	uzmoduledemo.onPageEndUM(param,function(ret,err){
 	    		alert(JSON.stringify(ret));
